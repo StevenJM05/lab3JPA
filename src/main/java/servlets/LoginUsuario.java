@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import modelos.Usuarios;
-import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -70,7 +69,7 @@ public class LoginUsuario extends HttpServlet {
                 session.setAttribute("usuario", usuario);
                 
                 if("admin".equals(usuario.getTipo())){
-                    response.sendRedirect("admin/admin-books.jsp");
+                    response.sendRedirect("AdminBooks");
                 }else{
                     response.sendRedirect("users/books.jsp");
                 }

@@ -49,7 +49,7 @@ public class Libros implements Serializable {
     private String autor;
     @Basic(optional = false)
     @Column(name = "genero")
-    private boolean genero;
+    private String genero;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLibro")
     private Collection<Preferencias> preferenciasCollection;
 
@@ -60,7 +60,7 @@ public class Libros implements Serializable {
         this.id = id;
     }
 
-    public Libros(Integer id, String titulo, String autor, boolean genero) {
+    public Libros(Integer id, String titulo, String autor, String genero) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
@@ -91,11 +91,11 @@ public class Libros implements Serializable {
         this.autor = autor;
     }
 
-    public boolean getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(boolean genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
