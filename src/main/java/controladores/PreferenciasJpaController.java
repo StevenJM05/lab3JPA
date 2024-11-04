@@ -199,4 +199,15 @@ public class PreferenciasJpaController implements Serializable {
         }
     }
     
+    public List<Preferencias> findPreferenciasByUsuarioId(Integer usuarioId) {
+    EntityManager em = getEntityManager();
+    try {
+        Query query = em.createQuery("SELECT p FROM Preferencias p WHERE p.usuarioId.id = :usuarioId", Preferencias.class);
+        query.setParameter("usuarioId", usuarioId);
+        return query.getResultList();
+    } finally {
+        em.close();
+    }
+}
+    
 }

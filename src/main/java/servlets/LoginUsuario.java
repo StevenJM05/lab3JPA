@@ -67,6 +67,7 @@ public class LoginUsuario extends HttpServlet {
             Usuarios usuario = usuariosController.findUsuarioByEmail(email);
             if(usuario != null && BCrypt.checkpw(clave, usuario.getClave())){
                 HttpSession session = request.getSession();
+                session.setAttribute("id", usuario.getId());
                 session.setAttribute("usuario", usuario);
                 
                 if("admin".equals(usuario.getTipo())){
