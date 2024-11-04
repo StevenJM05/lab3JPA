@@ -72,7 +72,7 @@ public class LoginUsuario extends HttpServlet {
                 if("admin".equals(usuario.getTipo())){
                     response.sendRedirect("AdminBooks");
                 }else{
-                    response.sendRedirect("users/books.jsp");
+                    response.sendRedirect("userbooks");
                 }
             }else{
                 request.setAttribute("error", "Email o contraseña incorrectos");

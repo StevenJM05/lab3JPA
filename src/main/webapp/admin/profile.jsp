@@ -53,20 +53,20 @@
             <div class="profile-image">
                 <img src="${pageContext.request.contextPath}/assets/img/hombre.png" alt="Harriet Nunez">
             </div>
-            <h2>Harriet Nunez</h2>
+            <h2>${user.nombre} ${user.apellido}</h2>
             <button class="appointment-btn">Profile Config</button>
             <div class="profile-info">
                 <div class="info-item">
                     <span>Nombre</span>
-                    <p>Harriet</p>
+                    <p>${user.nombre}</p>
                 </div>
                 <div class="info-item">
                     <span>Apellido</span>
-                    <p>Nunez</p>
+                    <p>${user.apellido}</p>
                 </div>
                 <div class="info-item">
                     <span>Email</span>
-                    <p>runolfsdiri.gillian@hotmail.com</p>
+                    <p>${user.email}</p>
                 </div>
             </div>
         </aside>

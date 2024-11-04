@@ -75,7 +75,9 @@
                                 <p>${user.email}</p>
                                 <p>${user.tipo}</p>
                             </div>
-                            <button id="btn-plus">Ver más</button>
+                            <a href="${pageContext.request.contextPath}/ProfileUser?id=${user.id}">
+                                <button id="btn-plus">Ver más</button>
+                            </a>
                         </div>
                     </c:forEach>
                 </section>
