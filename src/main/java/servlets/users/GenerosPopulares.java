@@ -4,13 +4,18 @@
  */
 package servlets.users;
 
+import controladores.LibrosJpaController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Libros;
 
 /**
  *
@@ -18,6 +23,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "GenerosPopulares", urlPatterns = {"/GenerosPopulares"})
 public class GenerosPopulares extends HttpServlet {
+
+    private LibrosJpaController librosController;
+
+    @Override
+    public void init() throws ServletException {
+
+        librosController = new LibrosJpaController();
+    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,7 +49,7 @@ public class GenerosPopulares extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet GenerosPopulares</title>");            
+            out.println("<title>Servlet GenerosPopulares</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet GenerosPopulares at " + request.getContextPath() + "</h1>");
@@ -54,10 +67,24 @@ public class GenerosPopulares extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+  
+       @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Obtener todos los libros
+        List<Libros> libros = librosController.findLibrosEntities();
+
+        // Contar géneros
+        Map<String, Long> contadorGeneros = new HashMap<>();
+        for (Libros libro : libros) {
+            String genero = libro.getGenero();
+            contadorGeneros.put(genero, contadorGeneros.getOrDefault(genero, 0L) + 1);
+        }
+
+        // Pasar los datos al request para la JSP
+        request.setAttribute("contadorGeneros", contadorGeneros);
+
+        // Redirigir a la JSP
+        request.getRequestDispatcher("users/generosPopulares.jsp").forward(request, response);
     }
 
     /**

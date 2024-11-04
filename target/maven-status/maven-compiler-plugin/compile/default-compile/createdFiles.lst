@@ -7,7 +7,6 @@ servlets\AdminBooks.class
 servlets\users\LibrosPopulares.class
 servlets\ProfileUser.class
 servlets\AgregarUsuario.class
-.netbeans_automatic_build
 servlets\RegistroUsuario.class
 controladores\exceptions\IllegalOrphanException.class
 servlets\ActualizarLibro.class

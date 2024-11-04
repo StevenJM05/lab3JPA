@@ -4,6 +4,7 @@ C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\L
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\exceptions\NonexistentEntityException.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\EliminarLibro.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\LoginUsuario.java
+C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\GenerosPopulares.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\LibrosJpaController.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\exceptions\IllegalOrphanException.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\ActualizarUsuario.java
