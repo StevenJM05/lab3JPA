@@ -38,3 +38,9 @@ function actualizarLibro(id, titulo, autor, genero) {
     // Muestra el modal de actualización
     modalActualizar.style.display = 'flex';
 }
+
+function eliminarLibro(id){
+    const idInput = document.getElementById('idElim');
+    idInput.value = id;
+    modalEli.style.display = 'flex';
+}

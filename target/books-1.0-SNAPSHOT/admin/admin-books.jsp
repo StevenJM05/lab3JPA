@@ -157,11 +157,12 @@
                         <span class="close-btn" onclick="cerrar()">&times;</span>
                         <h2>Eliminar Libro</h2>
                     </div>
-                    <form>
+                    <form  action="EliminarLibro" method="post">
+                        <input type="hidden" id="idElim" name="id">
                         <label>Desea eliminar el libro?</label>
                         <div class="modal-footer">
                             <button class="btn-enviar" type="submit">Save</button>
-                            <button class="btn-cancelar" onclick="cerrar()">Exit</button>
+                            <button class="btn-cancelar" type="button" onclick="cerrar()">Exit</button>
                         </div>
                     </form>
                 </div>

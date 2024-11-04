@@ -285,3 +285,10 @@ input:focus{
     border: none;
     margin-bottom: 10px;
 }
+
+.selectmodal{
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+}

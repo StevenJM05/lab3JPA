@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import modelos.Usuarios;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -64,7 +65,7 @@ public class LoginUsuario extends HttpServlet {
         
         try{
             Usuarios usuario = usuariosController.findUsuarioByEmail(email);
-            if(usuario != null && clave.equals(usuario.getClave())){
+            if(usuario != null && BCrypt.checkpw(clave, usuario.getClave())){
                 HttpSession session = request.getSession();
                 session.setAttribute("usuario", usuario);
                 
