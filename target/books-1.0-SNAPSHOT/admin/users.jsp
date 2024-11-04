@@ -18,6 +18,7 @@
     <body>
         <div class="container">
             <!-- Barra Lateral -->
+            <!-- Barra Lateral -->
             <aside class="sidebar">
                 <div class="logo">WorldBook</div>
                 <nav class="nav-menu">
@@ -28,22 +29,30 @@
                         </li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/libro.png" alt="Inicio">
-                            <a href="#">Books</a></li>
+                            <a href="${pageContext.request.contextPath}/AdminBooks">Books</a>
+                        </li>
                         <li>
-                            <img src="${pageContext.request.contextPath}/assets/img/administracion.png" alt="Inicio">
-                            <a href="#">Users</a></li>
+                            <img src="${pageContext.request.contextPath}/assets/img/administracion.png"
+                                 alt="Inicio">
+                            <a href="${pageContext.request.contextPath}/ListarUsuarios">Users</a>
+                        </li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/diagrama.png" alt="Inicio">
-                            <a href="#">Popular books</a></li>
+                            <a href="${pageContext.request.contextPath}/LPopulares">Popular books</a>
+                        </li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/pizarron.png" alt="Inicio">
-                            <a href="#">Popular genres</a></li>
+                            <a href="${pageContext.request.contextPath}/GenPopulares">Popular genres</a>
+                        </li>
                         <li>
-                            <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png" alt="Inicio">
-                            <a href="#">Evolution of interest</a></li>
+                            <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png"
+                                 alt="Inicio">
+                            <a href="${pageContext.request.contextPath}/EvolucionA">Evolution of interest</a>
+                        </li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Inicio">
-                            <a href="#">Log out</a></li>
+                            <a href="#">Log out</a>
+                        </li>
                     </ul>
                 </nav>
             </aside>

@@ -4,15 +4,18 @@
  */
 package servlets;
 
+import controladores.PreferenciasJpaController;
 import controladores.UsuariosJpaController;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Preferencias;
 import modelos.Usuarios;
 
 /**
@@ -64,8 +67,11 @@ public class ProfileUser extends HttpServlet {
         if (userIdParam != null) {
             int userId = Integer.parseInt(userIdParam);
             UsuariosJpaController usuariosJpaController = new UsuariosJpaController();
+            PreferenciasJpaController preferenciasJpaController = new PreferenciasJpaController();
             Usuarios user = usuariosJpaController.findUsuarios(userId);
             request.setAttribute("user", user);
+            List<Preferencias> preferenciasList = preferenciasJpaController.findPreferenciasByUsuarioId(userId);
+            request.setAttribute("preferenciasList", preferenciasList);
             RequestDispatcher dispatcher = request.getRequestDispatcher("admin/profile.jsp");
             dispatcher.forward(request, response);
         } else {

@@ -227,4 +227,19 @@ public class PreferenciasJpaController implements Serializable {
         }
     }
 
+    public List<Object[]> findPreferencesOverTimeForAllBooks() {
+        EntityManager em = getEntityManager();
+        try {
+            Query query = em.createQuery(
+                    "SELECT p.idLibro.id, p.idLibro.titulo, p.fechaSeleccion, COUNT(p) \n"
+                    + "FROM Preferencias p \n"
+                    + "GROUP BY p.idLibro.id, p.idLibro.titulo, p.fechaSeleccion \n"
+                    + "ORDER BY p.idLibro.id, p.fechaSeleccion ASC", Object[].class
+            );
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
 }

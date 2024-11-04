@@ -4,14 +4,17 @@ C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\L
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\exceptions\NonexistentEntityException.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\EliminarLibro.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\LoginUsuario.java
+C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\PreferenciasG.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\GenerosPopulares.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\LibrosJpaController.java
+C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\LPopulares.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\exceptions\IllegalOrphanException.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\ActualizarUsuario.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\modelos\Libros.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\exceptions\PreexistingEntityException.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\LikeBook.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\modelos\Preferencias.java
+C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\Evolucion.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\com\mycompany\books\JakartaRestConfiguration.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\users\Profile.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\PreferenciasJpaController.java
@@ -20,6 +23,8 @@ C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\Profile
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\AgregarLibro.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\RegistroUsuario.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\TestConnection.java
+C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\EvolucionA.java
+C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\GenPopulares.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\controladores\UsuariosJpaController.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\AgregarUsuario.java
 C:\Users\steve_y\Documents\NetBeansProjects\books\src\main\java\servlets\ActualizarLibro.java

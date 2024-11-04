@@ -30,7 +30,7 @@
                             <a href="GenerosPopulares">Popular genres</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png" alt="Evolution of Interest">
-                            <a href="Evolucion">Evolution of interest</a></li>
+                            <a href="PreferenciasG">Evolution of interest</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Log Out">
                             <a href="LogOut">Log out</a></li>
