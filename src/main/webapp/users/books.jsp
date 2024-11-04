@@ -21,19 +21,19 @@
                             <a href="Profile">Profile</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/libro.png" alt="Books">
-                            <a href="#">Books</a></li>
+                            <a href="userbooks">Books</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/diagrama.png" alt="Popular Books">
-                            <a href="#">Popular books</a></li>
+                            <a href="LibrosPopulares">Popular books</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/pizarron.png" alt="Popular Genres">
-                            <a href="#">Popular genres</a></li>
+                            <a href="GenerosPopulares">Popular genres</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png" alt="Evolution of Interest">
-                            <a href="#">Evolution of interest</a></li>
+                            <a href="Evolucion">Evolution of interest</a></li>
                         <li>
                             <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Log Out">
-                            <a href="#">Log out</a></li>
+                            <a href="LogOut">Log out</a></li>
                     </ul>
                 </nav>
             </aside>

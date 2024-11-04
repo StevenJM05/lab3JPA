@@ -22,29 +22,23 @@
             <nav class="nav-menu">
                 <ul>
                     <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/leon.png" alt="Inicio">
-                        <a href="#">Profile</a>
-                    </li>
+                        <img src="${pageContext.request.contextPath}/assets/img/leon.png" alt="Profile">
+                        <a href="Profile">Profile</a></li>
                     <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/libro.png" alt="Inicio">
-                        <a href="userbooks">Books</a>
-                    </li>
+                        <img src="${pageContext.request.contextPath}/assets/img/libro.png" alt="Books">
+                        <a href="userbooks">Books</a></li>
                     <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/diagrama.png" alt="Inicio">
-                        <a href="#">Popular books</a>
-                    </li>
+                        <img src="${pageContext.request.contextPath}/assets/img/diagrama.png" alt="Popular Books">
+                        <a href="LibrosPopulares">Popular books</a></li>
                     <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/pizarron.png" alt="Inicio">
-                        <a href="#">Popular genres</a>
-                    </li>
+                        <img src="${pageContext.request.contextPath}/assets/img/pizarron.png" alt="Popular Genres">
+                        <a href="GenerosPopulares">Popular genres</a></li>
                     <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png" alt="Inicio">
-                        <a href="#">Evolution of interest</a>
-                    </li>
+                        <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png" alt="Evolution of Interest">
+                        <a href="Evolucion">Evolution of interest</a></li>
                     <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Inicio">
-                        <a href="#">Log out</a>
-                    </li>
+                        <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Log Out">
+                        <a href="LogOut">Log out</a></li>
                 </ul>
             </nav>
         </aside>

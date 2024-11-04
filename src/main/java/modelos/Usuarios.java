@@ -159,5 +159,9 @@ public class Usuarios implements Serializable {
     public String toString() {
         return "modelos.Usuarios[ id=" + id + " ]";
     }
+
+    public void setPassword(String hashedPassword) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

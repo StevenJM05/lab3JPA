@@ -25,9 +25,8 @@ import modelos.Usuarios;
 public class PreferenciasJpaController implements Serializable {
 
     public PreferenciasJpaController() {
-         this.emf=Persistence.createEntityManagerFactory("PU");
+        this.emf = Persistence.createEntityManagerFactory("PU");
     }
-    
 
     public PreferenciasJpaController(EntityManagerFactory emf) {
         this.emf = emf;
@@ -198,16 +197,34 @@ public class PreferenciasJpaController implements Serializable {
             em.close();
         }
     }
-    
+
     public List<Preferencias> findPreferenciasByUsuarioId(Integer usuarioId) {
-    EntityManager em = getEntityManager();
-    try {
-        Query query = em.createQuery("SELECT p FROM Preferencias p WHERE p.usuarioId.id = :usuarioId", Preferencias.class);
-        query.setParameter("usuarioId", usuarioId);
-        return query.getResultList();
-    } finally {
-        em.close();
+        EntityManager em = getEntityManager();
+        try {
+            Query query = em.createQuery("SELECT p FROM Preferencias p WHERE p.usuarioId.id = :usuarioId", Preferencias.class);
+            query.setParameter("usuarioId", usuarioId);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
     }
-}
-    
+
+    public List<Object[]> findMostPopularBooks(int limit) {
+        EntityManager em = getEntityManager();
+        try {
+            // Consulta que cuenta las preferencias por cada libro y las ordena de manera descendente
+            Query query = em.createQuery(
+                    "SELECT p.idLibro, COUNT(p) FROM Preferencias p "
+                    + "GROUP BY p.idLibro "
+                    + "ORDER BY COUNT(p) DESC", Object[].class);
+
+            // Establece un límite para la cantidad de resultados que deseas recuperar
+            query.setMaxResults(limit);
+
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
 }
