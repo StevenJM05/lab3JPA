@@ -8,44 +8,32 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/books.css">
     </head>
     <body>
-        <!-- Barra Lateral -->
-        <aside class="sidebar">
-            <div class="logo">WorldBook</div>
-            <nav class="nav-menu">
-                <ul>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/leon.png" alt="Inicio">
-                        <a href="#">Profile</a>
-                    </li>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/libro.png" alt="Inicio">
-                        <a href="${pageContext.request.contextPath}/AdminBooks">Books</a>
-                    </li>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/administracion.png"
-                             alt="Inicio">
-                        <a href="${pageContext.request.contextPath}/ListarUsuarios">Users</a>
-                    </li>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/diagrama.png" alt="Inicio">
-                        <a href="${pageContext.request.contextPath}/LPopulares">Popular books</a>
-                    </li>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/pizarron.png" alt="Inicio">
-                        <a href="${pageContext.request.contextPath}/GenPopulares">Popular genres</a>
-                    </li>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png"
-                             alt="Inicio">
-                        <a href="${pageContext.request.contextPath}/EvolucionA">Evolution of interest</a>
-                    </li>
-                    <li>
-                        <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Inicio">
-                        <a href="#">Log out</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside> 
+                <!-- Barra Lateral -->
+            <aside class="sidebar">
+                <div class="logo">WorldBook</div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li>
+                            <img src="${pageContext.request.contextPath}/assets/img/leon.png" alt="Profile">
+                            <a href="Profile">Profile</a></li>
+                        <li>
+                            <img src="${pageContext.request.contextPath}/assets/img/libro.png" alt="Books">
+                            <a href="userbooks">Books</a></li>
+                        <li>
+                            <img src="${pageContext.request.contextPath}/assets/img/diagrama.png" alt="Popular Books">
+                            <a href="LibrosPopulares">Popular books</a></li>
+                        <li>
+                            <img src="${pageContext.request.contextPath}/assets/img/pizarron.png" alt="Popular Genres">
+                            <a href="GenerosPopulares">Popular genres</a></li>
+                        <li>
+                            <img src="${pageContext.request.contextPath}/assets/img/grafico-de-lineas.png" alt="Evolution of Interest">
+                            <a href="PreferenciasG">Evolution of interest</a></li>
+                        <li>
+                            <img src="${pageContext.request.contextPath}/assets/img/cerrar-sesion.png" alt="Log Out">
+                            <a href="LogOut">Log out</a></li>
+                    </ul>
+                </nav>
+            </aside> 
         <h2>Evolución de Preferencias por Libro a lo Largo del Tiempo</h2>
         <canvas id="lineChart" width="800" height="400"></canvas>
 
